@@ -40,33 +40,43 @@
 --VALUES ((SELECT MAX(EmailId) FROM dbo.Emails) , (SELECT MAX(PhoneNumberId) FROM dbo.PhoneNumbers), (SELECT MAX(AdressId) FROM dbo.Adresses), 
 --@LastName, @FirstName)
 
-CREATE PROCEDURE sp_InsertCompany
-	@CompanyName NVARCHAR(60) ,
-	@Adress NVARCHAR(100),
-	@City NVARCHAR(60),
-	@Email NVARCHAR(30),
-	@PhoneNumber NVARCHAR(30),
-	@PreferredDeliveryServiceId INT,
-	@PreferredDeliveryServiceDepartment NVARCHAR(30),
-	@PreferredCompanyAgentId INT
-AS
-	EXECUTE sp_InsertAdress1Ukraine @City, @Adress
-	EXECUTE sp_InsertEmailWork @Email
-	EXECUTE sp_InsertPhoneNumberWork @PhoneNumber
-	INSERT INTO dbo.Companies (CompanyName, AdressId, PreferredDeliveryServiceId, PreferredDeliveryServiceDepartment, 
-				PhoneNumberId, 	PreferredCompanyAgentId, EmailId )	VALUES
-	(@CompanyName, 
-	(SELECT MAX(AdressId) FROM dbo.Adresses), 
-	@PreferredDeliveryServiceId, 
-	@PreferredDeliveryServiceDepartment,
-	 (SELECT MAX(PhoneNumberId) FROM dbo.PhoneNumbers),
-	@PreferredCompanyAgentId, (SELECT MAX(EmailId) FROM dbo.Emails) )
+--CREATE PROCEDURE sp_InsertCompany
+--	@CompanyName NVARCHAR(60) ,
+--	@Adress NVARCHAR(100),
+--	@City NVARCHAR(60),
+--	@Email NVARCHAR(30),
+--	@PhoneNumber NVARCHAR(30),
+--	@PreferredDeliveryServiceId INT,
+--	@PreferredDeliveryServiceDepartment NVARCHAR(30),
+--	@PreferredCompanyAgentId INT
+--AS
+--	EXECUTE sp_InsertAdress1Ukraine @City, @Adress
+--	EXECUTE sp_InsertEmailWork @Email
+--	EXECUTE sp_InsertPhoneNumberWork @PhoneNumber
+--	INSERT INTO dbo.Companies (CompanyName, AdressId, PreferredDeliveryServiceId, PreferredDeliveryServiceDepartment, 
+--				PhoneNumberId, 	PreferredCompanyAgentId, EmailId )	VALUES
+--	(@CompanyName, 
+--	(SELECT MAX(AdressId) FROM dbo.Adresses), 
+--	@PreferredDeliveryServiceId, 
+--	@PreferredDeliveryServiceDepartment,
+--	 (SELECT MAX(PhoneNumberId) FROM dbo.PhoneNumbers),
+--	@PreferredCompanyAgentId, (SELECT MAX(EmailId) FROM dbo.Emails) )
 	
-	--EXEC sp_InsertPerson  'Dolhopolov' ,'Oleksii', '+380666102239', 'leshaomega@gmail.com', 'Kharkiv', 'Autopart market LOSk, row 7, place 110'
+--EXEC sp_InsertPerson  'Dolhopolov' ,'Oleksii', '+380666102239', 'leshaomega@gmail.com', 'Kharkiv', 'Autopart market LOSk, row 7, place 110'
 
-EXEC sp_InsertCompany 'Trade Rocket', 'Autopart market Losk', 'Kharkiv', 'traderocket@gmail.com', '+380504123698', 2, 'Office', 4
+--EXEC sp_InsertCompany 'Trade Rocket', 'Autopart market Losk', 'Kharkiv', 'traderocket@gmail.com', '+380504123698', 2, 'Office', 4
+
+--execute sp_InsertPerson 'Default', 'Customer', 'None', 'None', 'Kharkiv', 'None'
+
+--INSERT INTO dbo.WorkPositions (WorkPositionName) VALUES ('Sales Manager'), ('Director'), ('IT Specialist'), ('Storekeeper')
+--INSERT INTO dbo.WorkPositions (WorkPositionName) VALUES ('Accountant')
+
+--EXEC sp_InsertPerson 'Tretiak', 'Julia', '+380636919754', 'tretiakjulia@gmail.com', 'Kharkiv', 'Molochna 11, flat 16'
 
 
+--INSERT INTO dbo.Employees (PersonId, WorkPositionId, SalaryRate, HiredDate) VALUES (7, 5, 10000, GETDATE() )
+
+SELECT * FROM dbo.WorkPositions
 
 
 	

@@ -184,14 +184,53 @@
 
 
 
+--CREATE TABLE CompaniesProviders
+--(
+--	CompanyProviderId INT IDENTITY(1,1) PRIMARY KEY,
+--	CompanyId INT FOREIGN KEY REFERENCES dbo.Companies(CompanyId) 
+--)
 
---('', '', '', '', '', '', '', ''),
---('', '', '', '', '', '', '', ''),
---('', '', '', '', '', '', '', ''),
---('', '', '', '', '', '', '', ''),
---('', '', '', '', '', '', '', ''),
---('', '', '', '', '', '', '', ''),
+--CREATE TABLE CompaniesClients
+--(
+--	CompanyProviderId INT IDENTITY(1,1) PRIMARY KEY,
+--	CompanyId INT FOREIGN KEY REFERENCES dbo.Companies(CompanyId) 
+--)
+
+--CREATE TABLE WorkPositions
+--(
+--	WorkPositionId INT IDENTITY(1,1) PRIMARY KEY,
+--	WorkPositionName NVARCHAR(50) NOT NULL UNIQUE
+--)
 
 
+--CREATE TABLE Employees
+--(
+--	EmployeeId  INT IDENTITY(1,1) PRIMARY KEY,
+--	PersonId INT FOREIGN KEY REFERENCES dbo.People(PersonId),
+--	WorkPositionId INT FOREIGN KEY REFERENCES dbo.WorkPositions(WorkPositionId),
+--	SalaryRate MONEY NOT NULL,
+--	HiredDate DATE NOT NULL
+--)
+
+--CREATE TABLE Checks
+--(
+--	CheckId  INT IDENTITY(1,1) PRIMARY KEY,
+--	EmployeeId INT FOREIGN KEY REFERENCES dbo.Employees(EmployeeId),
+--	DateOfIssue DATE NOT NULL,
+--	TimeOfIssue TIME NULL,
+--	TotalSum MONEY  NOT NULL	
+--)
+
+--CREATE TABLE CheckDetails 
+--(
+--	CheckDetailsId INT IDENTITY(1,1) PRIMARY KEY,
+--	CheckId INT FOREIGN KEY REFERENCES dbo.Checks(CheckId) NOT NULL,
+--	EmployeeId INT FOREIGN KEY REFERENCES dbo.Employees(EmployeeId),
+--	ProductId INT FOREIGN KEY REFERENCES dbo.Products(ProductId) NOT NULL,
+--	SaledPrice MONEY NOT NULL,
+--	NumberOfProducts INT NOT NULL
+--)
+
+SELECT * FROM dbo.v_Products
  
 
