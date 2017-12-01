@@ -1,3 +1,5 @@
+use AutopartsShop
+GO
 --select * from dbo.Categories order by CategoryId
 
 --select * 

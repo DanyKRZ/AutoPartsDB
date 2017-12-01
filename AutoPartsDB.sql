@@ -1,3 +1,5 @@
+use AutopartsShop
+GO	
 	--create database AutopartsShop
 
 --CREATE TABLE Categories
@@ -216,21 +218,35 @@
 --(
 --	CheckId  INT IDENTITY(1,1) PRIMARY KEY,
 --	EmployeeId INT FOREIGN KEY REFERENCES dbo.Employees(EmployeeId),
---	DateOfIssue DATE NOT NULL,
---	TimeOfIssue TIME NULL,
+--	DateOfIssue DATETIME NOT NULL,
 --	TotalSum MONEY  NOT NULL	
 --)
+
+--ALTER TABLE dbo.Checks
+--DROP COLUMN TimeOfIssue 
 
 --CREATE TABLE CheckDetails 
 --(
 --	CheckDetailsId INT IDENTITY(1,1) PRIMARY KEY,
 --	CheckId INT FOREIGN KEY REFERENCES dbo.Checks(CheckId) NOT NULL,
---	EmployeeId INT FOREIGN KEY REFERENCES dbo.Employees(EmployeeId),
 --	ProductId INT FOREIGN KEY REFERENCES dbo.Products(ProductId) NOT NULL,
 --	SaledPrice MONEY NOT NULL,
 --	NumberOfProducts INT NOT NULL
 --)
 
-SELECT * FROM dbo.v_Products
+
+--SELECT * FROM dbo.v_Products
+
+--select * from v_Employees
+
+
+
+--INSERT INTO dbo.Checks (EmployeeId, DateOfIssue, TotalSum) VALUES (1, GETDATE(), 45180)
+--select * from dbo.Checks
+--select * from v_Products
+
+--INSERT INTO dbo.CheckDetails (CheckId, ProductId, SaledPrice, NumberOfProducts) VALUES (1,3,1530,7), (1,4,680,8), (1,5,1150,11), (1,6,1260,13)
+
+select * from dbo.CheckDetails
  
 

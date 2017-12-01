@@ -1,3 +1,5 @@
+use AutopartsShop
+GO
 --INSERT INTO dbo.PhoneNumbers (WorkPhoneNumber, CellPhoneNumber) VALUES ('+380956799878', '+380662144607')
 
 
