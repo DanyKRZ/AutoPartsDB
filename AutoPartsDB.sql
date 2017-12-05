@@ -1,5 +1,5 @@
-use AutopartsShop
-GO	
+--use AutopartsShop
+--GO	
 	--create database AutopartsShop
 
 --CREATE TABLE Categories
@@ -247,6 +247,90 @@ GO
 
 --INSERT INTO dbo.CheckDetails (CheckId, ProductId, SaledPrice, NumberOfProducts) VALUES (1,3,1530,7), (1,4,680,8), (1,5,1150,11), (1,6,1260,13)
 
-select * from dbo.CheckDetails
- 
+--select * from dbo.CheckDetails
+
+--select * from  v_Products
+
+--SELECT *
+--from V_CompaniesProviders
+
+--Select *
+--From V_CompaniesClients
+
+--select *
+--from V_Companies
+
+--select *
+--from dbo.Adresses
+
+--exec sp_InsertCompany 'KRZautoparts', 'Sumskaya 11', 'Kharkiv', 'krzautoparts@gmail.com', '+380954988787', 3, 'Pochtomat 1020, Pushkinska 10, Kharkiv', 6
+
+
+
+--INT FOREIGN KEY REFERENCES dbo.CompaniesClients(CompanyClientId);
+--ADD COLUMN CompanyProviderId INT FOREIGN KEY REFERENCES dbo.CompaniesProviders()
+
+--update dbo.Checks
+--SET CompanyClientId = 2
+--where CheckId = 1
+
+--ALTER TABLE dbo.Checks
+--ADD CompanyEmployeeId INT FOREIGN KEY REFERENCES dbo.CompanyEmployees(CompanyEmployeeId)
+
+
+--INSERT INTO dbo.CompanyEmployees(CompanyId, PersonId) Values(5,5)
+
+--update dbo.Checks
+--SET CustomerCompanyEmployeeId = 5
+--WHERE CheckId = 1
+
+--select * 
+--from V_CompaniesClients
+
+--select *
+--from Companies
+
+--select *
+--from People
+
+
+--select * from
+--dbo.V_Employees
+
+--select * 
+--from V_CompanyEmployees
+
+
+--JOIN dbo.CompaniesProviders CmpP on CmpP.CompanyProviderId = Chk.CompanyProviderId
+
+--JOIN dbo.CompaniesClients CmpC on Cmpc.CompanyClientId = Chk.CompanyClientId
+--JOIN dbo.Companies CmpCl on CmpCl.CompanyId = CmpC.CompanyId
+
+--CREATE TRIGGER TR_UpdateProductQuantityNumbers
+
+--ON dbo.CheckDetails
+--BEFORE INSERT
+
+--CREATE TABLE dbo.TypesOfCheck
+--(
+--	TypeOfCheckId INT IDENTITY(1,1) PRIMARY KEY,
+--	TypeOfCheckName NVARCHAR(25) NOT NULL UNIQUE
+--)
+
+--INSERT INTO dbo.TypesOfCheck (TypeOfCheckName) VALUES ('Selling'), ('Purchasing')
+
+select *
+from dbo.TypesOfCheck
+
+select * 
+from V_Checks
+
+
+--select *
+--from V_CheckDetails
+
+--select QuantityNumber
+--from V_Products
+  
+
 

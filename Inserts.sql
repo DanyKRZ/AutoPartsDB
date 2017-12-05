@@ -78,7 +78,7 @@ GO
 
 --INSERT INTO dbo.Employees (PersonId, WorkPositionId, SalaryRate, HiredDate) VALUES (7, 5, 10000, GETDATE() )
 
-SELECT * FROM dbo.WorkPositions
+--SELECT * FROM dbo.WorkPositions
 
 
 	
