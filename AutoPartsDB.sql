@@ -1,5 +1,5 @@
---use AutopartsShop
---GO	
+use AutopartsShop
+GO	
 	--create database AutopartsShop
 
 --CREATE TABLE Categories
@@ -319,11 +319,11 @@
 
 --INSERT INTO dbo.TypesOfCheck (TypeOfCheckName) VALUES ('Selling'), ('Purchasing')
 
-select *
-from dbo.TypesOfCheck
+--select *
+--from dbo.TypesOfCheck
 
-select * 
-from V_Checks
+--select * 
+--from V_Checks
 
 
 --select *
@@ -332,5 +332,42 @@ from V_Checks
 --select QuantityNumber
 --from V_Products
   
+ --Delivery
+
+ --CREATE TABLE dbo.TypesOfPayment
+ --(
+	--TypeOfPaymentId INT IDENTITY(1,1) PRIMARY KEY,
+	--TypeOfPaymentName NVARCHAR(25) NOT NULL UNIQUE
+ --)
+
+ --INSERT INTO dbo.TypesOfPayment (TypeOfPaymentName) VALUES ('Paid'), ('Shipped'), ('Cash on delivery'), ('On credit')
+ --SELECT *
+ --FROM dbo.TypesOfPayment
+
+ --SELECT *
+ --FROM V_CompanyEmployees
+ --SELECT *
+ --FROM V_People
+ --select *
+ --fROM DBO.People
+
+ --SELECT *
+ --FROM V_Companies
+
+--CREATE TABLE dbo.DeliveryReceipt
+--(
+--	DeliveryReceiptId INT IDENTITY(1,1) PRIMARY KEY,
+--	AdressId INT FOREIGN KEY REFERENCES dbo.Adresses(AdressId) NOT NULL,
+--	ArrivalDate DATETIME NOT NULL,
+--	CheckId INT FOREIGN KEY REFERENCES dbo.Checks(CheckId) NOT NULL,
+--	CompanyEmployeeId INT FOREIGN KEY REFERENCES dbo.Checks(CheckId) NOT NULL,
+--	Comments NVARCHAR(100) NULL ,
+--	DeliveryServiceId INT FOREIGN KEY REFERENCES dbo.Checks(CheckId) NOT NULL,
+--	DeliveryServiceReceiptNumber NVARCHAR(35) NOT NULL ,
+--	DepartureDate DATETIME NOT NULL,	
+--	TypeOfPaymentId INT FOREIGN KEY REFERENCES dbo.TypesOfPayment(TypeOfPaymentId) NOT NULL	
+--)
+
+
 
 
