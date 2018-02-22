@@ -1,0 +1,11 @@
+D:\Task\AutoParts\AutoPartsDB\AutopartsShop\AutopartsShop2\AutopartsShop2\bin\Debug\netcoreapp2.0\AutopartsShop2.deps.json
+D:\Task\AutoParts\AutoPartsDB\AutopartsShop\AutopartsShop2\AutopartsShop2\bin\Debug\netcoreapp2.0\AutopartsShop2.runtimeconfig.json
+D:\Task\AutoParts\AutoPartsDB\AutopartsShop\AutopartsShop2\AutopartsShop2\bin\Debug\netcoreapp2.0\AutopartsShop2.runtimeconfig.dev.json
+D:\Task\AutoParts\AutoPartsDB\AutopartsShop\AutopartsShop2\AutopartsShop2\bin\Debug\netcoreapp2.0\AutopartsShop2.dll
+D:\Task\AutoParts\AutoPartsDB\AutopartsShop\AutopartsShop2\AutopartsShop2\bin\Debug\netcoreapp2.0\AutopartsShop2.pdb
+D:\Task\AutoParts\AutoPartsDB\AutopartsShop\AutopartsShop2\AutopartsShop2\obj\Debug\netcoreapp2.0\AutopartsShop2.csproj.CoreCompileInputs.cache
+D:\Task\AutoParts\AutoPartsDB\AutopartsShop\AutopartsShop2\AutopartsShop2\obj\Debug\netcoreapp2.0\AutopartsShop2.AssemblyInfoInputs.cache
+D:\Task\AutoParts\AutoPartsDB\AutopartsShop\AutopartsShop2\AutopartsShop2\obj\Debug\netcoreapp2.0\AutopartsShop2.AssemblyInfo.cs
+D:\Task\AutoParts\AutoPartsDB\AutopartsShop\AutopartsShop2\AutopartsShop2\obj\Debug\netcoreapp2.0\AutopartsShop2.dll
+D:\Task\AutoParts\AutoPartsDB\AutopartsShop\AutopartsShop2\AutopartsShop2\obj\Debug\netcoreapp2.0\AutopartsShop2.pdb
+D:\Task\AutoParts\AutoPartsDB\AutopartsShop\AutopartsShop2\AutopartsShop2\obj\Debug\netcoreapp2.0\AutopartsShop2.csprojResolveAssemblyReference.cache
